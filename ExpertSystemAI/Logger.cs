@@ -45,6 +45,5 @@ namespace ExpertSystemAI
                 Console.WriteLine();
             }
         }
-       
-    }
+           }
 }
