@@ -19,10 +19,12 @@ namespace ExpertSystemAI
         {
             Console.WriteLine(o);
         }
+
         public static void DisplaySingleLine(Object o)
         {
             Console.Write(o);
         }
+
         public static void DumpTable_Cells(DataTable dt)
         {
             foreach (DataRow dataRow in dt.Rows)

@@ -78,7 +78,6 @@ namespace ExpertSystemAI
 
         public static List<Dictionary<String,Object>> ConvertToList(DataTable dt)
         {
-           
             List<Dictionary<String, Object>> list = new List<Dictionary<String, Object>>();
             foreach (DataRow dataRow in dt.Rows)
             {
