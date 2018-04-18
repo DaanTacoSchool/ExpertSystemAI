@@ -19,6 +19,7 @@ namespace ExpertSystemAI
         {
             //daan
             int appendToTotal = 0; //return here what should be added to total score
+
             return appendToTotal;
         }
     }

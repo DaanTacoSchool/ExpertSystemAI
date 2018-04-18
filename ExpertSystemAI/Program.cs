@@ -25,8 +25,10 @@ namespace ExpertSystemAI
             _dt = ExcelReader.ImportSheet(fileName);
 
             List<Dictionary<String, Object>> tmp = ExcelReader.ConvertToList(_dt);
+            ProcessBaseConstraints pbc = new ProcessBaseConstraints();
             foreach (Dictionary<String, Object> d in tmp)
             {
+                int total = 0;
                 foreach (KeyValuePair<String, Object> kvp in d)
                 {
                     /* hier kan je checken welke colom het is met kvp.key 
@@ -35,9 +37,28 @@ namespace ExpertSystemAI
                       == hier geen logica ==
                       */
                     // Display hier als voorbeeld. straks alleen studentnummer en eindadvies weergeven. //
-                    Logger.Display(kvp.Key + " : " + kvp.Value);
+                    // Logger.Display(kvp.Key + " : " + kvp.Value);
+                   
+                    total += pbc.ColumnConstraints(kvp.Key, kvp.Value);
+                    Logger.Log("subtotal: " + total);
+                }
+                Logger.Log("total: " + total);
+
+                Logger.DisplaySingleLine(" points: " + total);
+                if(total <= 50)
+                {
+                    Logger.Display(" AI: Negatief");
+                }else if(total <= 70)
+                {
+                    Logger.Display(" AI: Twijfel");
+                }else if(total > 70)
+                {
+                    Logger.Display(" AI: Positief");
                 }
 
+
+               /* Logger.Log("totalb: " + (total+50));
+                Logger.Display(" pointsb: " + (total+50));*/
             }
         }
 
