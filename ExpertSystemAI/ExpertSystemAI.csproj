@@ -55,8 +55,10 @@
   <ItemGroup>
     <Compile Include="ExcelReader.cs" />
     <Compile Include="Logger.cs" />
+    <Compile Include="ProcessBaseConstraints.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Staging.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
