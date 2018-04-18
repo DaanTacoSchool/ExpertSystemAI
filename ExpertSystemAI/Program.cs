@@ -13,7 +13,6 @@ namespace ExpertSystemAI
         // for student intakes, requires .xlsx or .csv file as input
         static void Main(string[] args)
         {
-
             RunAI();
             Logger.Display("Exit? y/y");
             Console.ReadKey();
